@@ -1,0 +1,10 @@
+{
+  "HERO": {
+    "TITLE": "Hallo, ich bin Alex.",
+    "SUBTITLE": "Ein leidenschaftlicher Frontend-Entwickler."
+  },
+  "NAVIGATION": {
+    "ABOUT": "Über mich",
+    "PROJECTS": "Projekte"
+  }
+}

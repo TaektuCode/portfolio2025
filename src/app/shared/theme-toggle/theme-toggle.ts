@@ -3,7 +3,6 @@ import { Component, inject, computed } from '@angular/core';
 import { ThemeService } from '@app/core/theme.service';
 import { IconMoon } from '@app/icons/icon-moon/icon-moon';
 import { IconSun } from '@app/icons/icon-sun/icon-sun';
-
 @Component({
   selector: 'app-theme-toggle',
   imports: [NgClass, IconSun, IconMoon],
