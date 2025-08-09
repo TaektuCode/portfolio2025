@@ -1,10 +1,6 @@
 {
   "HERO": {
-    "TITLE": "Hallo, ich bin Alex.",
-    "SUBTITLE": "Ein leidenschaftlicher Frontend-Entwickler."
-  },
-  "NAVIGATION": {
-    "ABOUT": "Über mich",
-    "PROJECTS": "Projekte"
+    "PRE_NAME": "A . Russotto",
+    "JOB_TITLE": "Web Entwickler"
   }
 }

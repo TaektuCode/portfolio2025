@@ -28,6 +28,14 @@
   font-display: swap;
 }
 
+/* Bold Font: DSEG7 Modern */
+@font-face {
+  font-family: "DESG14";
+  src: url("/assets/fonts/DSEG14Classic-Bold.ttf");
+  font-weight: 800;
+  font-display: swap;
+}
+
 /*
  * =================================================================
  * 2. DESIGN TOKENS & GLOBAL STYLES
@@ -47,6 +55,7 @@
     --accent-active: 0 72.8% 44.9%; /* Akzent Active (#C02424) */
 
     /* Fonts */
+    --font-name: "DESG14";
     --font-text: "IBM Plex Sans";
     --font-headings: "Space Grotesk";
 

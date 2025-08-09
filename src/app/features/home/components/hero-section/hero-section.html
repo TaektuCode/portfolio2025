@@ -1,13 +1,28 @@
 <section
   class="relative overflow-hidden h-screen bg-cover bg-center bg-[url('/assets/images/backgrounds/heroBG_sw.jpg')]"
 >
+  <div class="absolute inset-0 z-0 bg-black/80"></div>
+
   <div class="absolute top-8 right-8 z-20">
     <app-theme-toggle />
     <app-language-toggle />
   </div>
 
+  <div class="relative z-10 flex h-full flex-col items-center justify-center">
+    <div class="text-center">
+      <h1 class="flex flex-col items-center font-name text-9xl text-accent">
+        <span>{{ "HERO.PRE_NAME" | translate }} </span>
+        <!-- <span>{{ "HERO.LAST_NAME" | translate }}</span> -->
+      </h1>
+    </div>
+
+    <p class="font-text mt-2 text-xl text-secondary">
+      - {{ "HERO.JOB_TITLE" | translate }} -
+    </p>
+  </div>
+
   <div
-    class="absolute inset-[-200%] w-[400%] h-[400%] bg-repeat opacity-20 animate-grain"
+    class="absolute inset-[-200%] w-[400%] h-[400%] bg-repeat opacity-15 animate-grain"
     style="background-image: url('/assets/images/textures/film-grain.png')"
   ></div>
 </section>

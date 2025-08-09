@@ -11,6 +11,9 @@ import { LanguageToggle } from '@app/shared/language-toggle/language-toggle';
   styleUrl: './hero-section.css',
 })
 export class HeroSection {
+  preName = 'AleH';
+  lastName = 'Russotto';
+
   private themeService = inject(ThemeService);
 
   theme = this.themeService.theme;

@@ -16,6 +16,7 @@ module.exports = {
         },
       },
       fontFamily: {
+        name: ["var(--font-name)", "sans-serif"],
         text: ["var(--font-primary)", "sans-serif"],
         headings: ["var(--font-headings)", "sans-serif"],
       },
