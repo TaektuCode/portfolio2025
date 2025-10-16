@@ -15,13 +15,13 @@
       <div
         class="flex-col items-center justify-center font-headings text-5xl uppercase text-primary"
       >
-        <span>{{ "HERO.FLIP_BEFORE" | translate }}&nbsp;</span>
+        <span>{{ "HERO.FLIP_BEFORE" | translate }}</span>
 
         <div class="h-[75px] overflow-hidden">
           <div class="animate-text-flip">
             <div>
               <div
-                class="mb-[75px] inline-block rounded-md bg-sky-500 px-3 py-2 text-white"
+                class="mb-[75px] inline-block rounded-md px-3 py-2 text-primary text-glow"
               >
                 {{ "HERO.FLIP_WORD_1" | translate }}
               </div>
@@ -29,7 +29,7 @@
 
             <div>
               <div
-                class="mb-[75px] inline-block rounded-md bg-emerald-500 px-3 py-2 text-white"
+                class="mb-[75px] inline-block rounded-md text-glow px-3 py-2 text-white"
               >
                 {{ "HERO.FLIP_WORD_2" | translate }}
               </div>
@@ -37,7 +37,7 @@
 
             <div>
               <div
-                class="mb-[75px] inline-block rounded-md bg-accent px-3 py-2 text-white"
+                class="mb-[75px] inline-block rounded-md text-glow px-3 py-2 text-white"
               >
                 {{ "HERO.FLIP_WORD_3" | translate }}
               </div>
@@ -45,10 +45,14 @@
           </div>
         </div>
 
-        <span>&nbsp;{{ "HERO.FLIP_AFTER" | translate }}</span>
+        <span>{{ "HERO.FLIP_AFTER" | translate }}</span>
       </div>
 
-      <p class="font-text mt-4 text-xl text-secondary">
+      <p class="font-text mt-3 text-xl text-secondary">
+        {{ "HERO.NAME" | translate }}
+      </p>
+
+      <p class="font-text text-xl text-secondary">
         {{ "HERO.JOB_TITLE" | translate }}
       </p>
     </div>

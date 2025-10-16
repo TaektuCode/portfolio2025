@@ -105,12 +105,13 @@
  */
 @layer utilities {
   .text-glow {
-    @apply relative;
-    text-shadow: 0 0 10px hsla(var(--accent-default), 0.5);
+    text-shadow: 0 0 8px hsla(0, 71.9%, 51.2%, 1),
+      0px 0px 20px hsla(0, 71.9%, 51.2%, 1),
+      0px 0px 40px hsla(0, 71.9%, 51.2%, 1);
   }
 
   .animate-text-flip {
-    animation: text-flip 5s linear infinite;
+    animation: text-flip 6.5s linear infinite;
   }
 }
 

@@ -1,10 +1,11 @@
 {
   "HERO": {
+    "NAME": "Alex Russotto",
     "JOB_TITLE": "Web Developer",
     "FLIP_BEFORE": "I build",
     "FLIP_WORD_1": "creative",
     "FLIP_WORD_2": "performant",
     "FLIP_WORD_3": "modern",
-    "FLIP_AFTER": "websites."
+    "FLIP_AFTER": "Applications."
   }
 }
