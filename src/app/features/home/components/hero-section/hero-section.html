@@ -1,28 +1,56 @@
 <section
-  class="relative overflow-hidden h-screen bg-cover bg-center bg-[url('/assets/images/backgrounds/heroBG_sw.jpg')]"
+  class="relative h-screen overflow-hidden bg-cover bg-center bg-[url('/assets/images/backgrounds/heroBG_sw.jpg')]"
 >
   <div class="absolute inset-0 z-0 bg-black/80"></div>
 
-  <div class="absolute top-8 right-8 z-20">
-    <app-theme-toggle />
+  <div class="absolute top-8 right-8 z-20 flex items-center gap-4">
     <app-language-toggle />
-  </div>
-
-  <div class="relative z-10 flex h-full flex-col items-center justify-center">
-    <div class="text-center">
-      <h1 class="flex flex-col items-center font-name text-9xl text-accent">
-        <span>{{ "HERO.PRE_NAME" | translate }} </span>
-        <!-- <span>{{ "HERO.LAST_NAME" | translate }}</span> -->
-      </h1>
-    </div>
-
-    <p class="font-text mt-2 text-xl text-secondary">
-      - {{ "HERO.JOB_TITLE" | translate }} -
-    </p>
+    <app-theme-toggle />
   </div>
 
   <div
-    class="absolute inset-[-200%] w-[400%] h-[400%] bg-repeat opacity-15 animate-grain"
-    style="background-image: url('/assets/images/textures/film-grain.png')"
-  ></div>
+    class="relative z-10 mx-auto flex h-full flex-col items-center justify-center"
+  >
+    <div class="w-full max-w-[1440px] px-4 text-center">
+      <div
+        class="flex-col items-center justify-center font-headings text-5xl uppercase text-primary"
+      >
+        <span>{{ "HERO.FLIP_BEFORE" | translate }}&nbsp;</span>
+
+        <div class="h-[75px] overflow-hidden">
+          <div class="animate-text-flip">
+            <div>
+              <div
+                class="mb-[75px] inline-block rounded-md bg-sky-500 px-3 py-2 text-white"
+              >
+                {{ "HERO.FLIP_WORD_1" | translate }}
+              </div>
+            </div>
+
+            <div>
+              <div
+                class="mb-[75px] inline-block rounded-md bg-emerald-500 px-3 py-2 text-white"
+              >
+                {{ "HERO.FLIP_WORD_2" | translate }}
+              </div>
+            </div>
+
+            <div>
+              <div
+                class="mb-[75px] inline-block rounded-md bg-accent px-3 py-2 text-white"
+              >
+                {{ "HERO.FLIP_WORD_3" | translate }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <span>&nbsp;{{ "HERO.FLIP_AFTER" | translate }}</span>
+      </div>
+
+      <p class="font-text mt-4 text-xl text-secondary">
+        {{ "HERO.JOB_TITLE" | translate }}
+      </p>
+    </div>
+  </div>
 </section>

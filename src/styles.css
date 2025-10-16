@@ -86,13 +86,15 @@
 
   /* --- Global UX-Enhancements --- */
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth overflow-hidden;
     font-size: 62.5%;
   }
 
   body {
-    @apply bg-background text-primary transition-colors duration-300;
+    @apply bg-background text-primary transition-colors duration-300 overflow-hidden;
+
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-size: 1.6rem;
   }
 }
 
@@ -105,5 +107,43 @@
   .text-glow {
     @apply relative;
     text-shadow: 0 0 10px hsla(var(--accent-default), 0.5);
+  }
+
+  .animate-text-flip {
+    animation: text-flip 5s linear infinite;
+  }
+}
+
+/*
+ * =================================================================
+ * 4. ANIMATIONS
+ * =================================================================
+ */
+
+/* Keyframes Flip-Animation */
+@keyframes text-flip {
+  0% {
+    margin-top: 130px;
+  }
+  5% {
+    margin-top: -3px;
+  }
+  33% {
+    margin-top: -3px;
+  }
+  38% {
+    margin-top: -160px;
+  }
+  66% {
+    margin-top: -160px;
+  }
+  71% {
+    margin-top: -315px;
+  }
+  99.99% {
+    margin-top: -315px;
+  }
+  100% {
+    margin-top: 130px;
   }
 }

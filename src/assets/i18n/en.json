@@ -1,7 +1,10 @@
 {
   "HERO": {
-    "PRE_NAME": "Aleh",
-    "LAST_NAME": "Russotto",
-    "JOB_TITLE": "Web Developer"
+    "JOB_TITLE": "Web Developer",
+    "FLIP_BEFORE": "I build",
+    "FLIP_WORD_1": "creative",
+    "FLIP_WORD_2": "performant",
+    "FLIP_WORD_3": "modern",
+    "FLIP_AFTER": "websites."
   }
 }
