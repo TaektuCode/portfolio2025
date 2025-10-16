@@ -6,6 +6,8 @@
     "FLIP_WORD_1": "creative",
     "FLIP_WORD_2": "performant",
     "FLIP_WORD_3": "modern",
-    "FLIP_AFTER": "Applications."
+    "FLIP_AFTER": "Applications.",
+    "CTA_PRIMARY": "Projects",
+    "CTA_SECONDARY": "About me"
   }
 }

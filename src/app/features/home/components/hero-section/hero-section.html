@@ -55,6 +55,17 @@
       <p class="font-text text-xl text-secondary">
         {{ "HERO.JOB_TITLE" | translate }}
       </p>
+      <div class="mt-8 flex justify-center gap-4">
+        <app-button variant="primary" [text]="'HERO.CTA_PRIMARY' | translate">
+        </app-button>
+
+        <app-button
+          variant="secondary"
+          href="#about"
+          [text]="'HERO.CTA_SECONDARY' | translate"
+        >
+        </app-button>
+      </div>
     </div>
   </div>
 </section>
