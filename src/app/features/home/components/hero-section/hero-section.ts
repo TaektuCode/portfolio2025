@@ -4,10 +4,11 @@ import { ThemeToggle } from '@app/shared/theme-toggle/theme-toggle';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageToggle } from '@app/shared/language-toggle/language-toggle';
 import { Button } from '@app/shared/button/button';
+import { SocialLinks } from '@app/shared/social-links/social-links';
 
 @Component({
   selector: 'app-hero-section',
-  imports: [ThemeToggle, TranslateModule, LanguageToggle, Button],
+  imports: [ThemeToggle, TranslateModule, LanguageToggle, Button, SocialLinks],
   templateUrl: './hero-section.html',
   styleUrl: './hero-section.css',
 })

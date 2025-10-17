@@ -50,9 +50,9 @@
     --border: 0 0% 87.8%;
 
     /* Accent Colors */
-    --accent-default: 0 71.9% 51.2%;
+    --accent-default: 0 72.8% 44.9%;
     --accent-hover: 0 79% 57.5%;
-    --accent-active: 0 72.8% 44.9%;
+    --accent-active: 0 71.9% 51.2%;
 
     /* Fonts */
     --font-name: "DESG14";
@@ -226,7 +226,7 @@
   }
 }
 
-/* Keyframes for the pulsing glow effect  */
+/* Keyframes for the pulsing glow effect */
 @keyframes pulse-glow {
   0%,
   100% {

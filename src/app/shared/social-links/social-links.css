@@ -1,0 +1,79 @@
+/* Styling for the link tags (<a>) */
+a {
+  /* Layout: This centers the icon inside the circle */
+  @apply relative flex h-16 w-16 items-center justify-center;
+
+  /* Appearance: Makes it a circle with a border */
+  @apply overflow-hidden rounded-full border-2 border-primary;
+
+  /* Colors & Transitions */
+  color: hsl(var(--primary)); /* Uses your primary text color */
+  text-decoration: none;
+  outline: none;
+  transition: color 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+/* Styling for the icon component itself (<app-icon-...>) */
+/* z-10 ensures it stays on top of the colored background */
+a > * {
+  @apply relative z-10;
+}
+
+/* The slide-up background (::after pseudo-element) */
+/* It's hidden below the circle by default */
+a::after {
+  content: "";
+  position: absolute;
+  inset: 100% 0 0; /* Starts completely at the bottom */
+  background: hsl(
+    var(--accent-default)
+  ); /* Uses the --bg variable from the HTML */
+  z-index: 0;
+  transition: inset 0.3s ease-in-out;
+}
+
+/* The tooltip (::before pseudo-element) */
+/* It's invisible and positioned above the icon by default */
+a::before {
+  content: attr(
+    data-tooltip
+  ); /* Gets the text from the data-tooltip attribute */
+  position: absolute;
+  inset: -60% auto auto 50%; /* Positions it above the icon */
+  transform: translateX(-50%);
+
+  /* Uses your theme colors for the tooltip */
+  @apply rounded bg-primary px-3 py-1 text-sm text-background;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
+    inset 0.3s cubic-bezier(0.47, 2, 0.41, 1.5);
+}
+
+/* --- HOVER & FOCUS EFFECTS --- */
+
+/* On hover, the icon color becomes white */
+a:hover,
+a:focus-visible {
+  color: #fff;
+}
+
+/* On hover, the background slides up from the bottom */
+a:hover::after,
+a:focus-visible::after {
+  inset-block-start: 0;
+}
+
+/* On hover, the tooltip becomes visible and moves up slightly */
+a:hover::before,
+a:focus-visible::before {
+  opacity: 1;
+  visibility: visible;
+  inset-block-start: -75%;
+}
+
+/* On click, the icon scales down slightly */
+a:active {
+  transform: scale(0.95);
+}
