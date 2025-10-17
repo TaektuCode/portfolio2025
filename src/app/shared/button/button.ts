@@ -7,7 +7,7 @@ import { NgClass } from '@angular/common';
   templateUrl: './button.html',
 })
 export class Button {
-  variant = input<'primary' | 'secondary'>('primary');
+  variant = input<'primary' | 'secondary' | 'glow'>('primary');
   href = input<string>();
 
   text = input<string>('');
