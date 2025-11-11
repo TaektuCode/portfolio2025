@@ -86,12 +86,12 @@
 
   /* --- Global UX-Enhancements --- */
   html {
-    @apply scroll-smooth overflow-hidden;
+    @apply scroll-smooth overflow-x-hidden;
     font-size: 62.5%;
   }
 
   body {
-    @apply bg-background text-primary transition-colors duration-300 overflow-hidden;
+    @apply bg-background text-primary transition-colors duration-300 overflow-x-hidden;
     font-feature-settings: "rlig" 1, "calt" 1;
     font-size: 1.6rem;
   }
