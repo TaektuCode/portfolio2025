@@ -33,6 +33,7 @@ module.exports = {
       },
       animation: {
         grain: "grain 8s steps(10, end) infinite",
+        infiniteScroll: "infiniteScroll 25s linear infinite",
       },
       keyframes: {
         grain: {
@@ -46,6 +47,10 @@ module.exports = {
           "70%": { transform: "translate(0%, 15%)" },
           "80%": { transform: "translate(3%, 35%)" },
           "90%": { transform: "translate(-10%, 10%)" },
+        },
+        infiniteScroll: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
         },
       },
     },
