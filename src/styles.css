@@ -110,7 +110,13 @@
   }
 
   .animate-text-flip {
-    animation: text-flip 6.5s linear infinite;
+    animation: text-flip-mobile 6.5s linear infinite;
+  }
+
+  @screen md {
+    .animate-text-flip {
+      animation: text-flip-desktop 6.5s linear infinite;
+    }
   }
 }
 
@@ -120,32 +126,60 @@
  * =================================================================
  */
 
-/* Keyframes for the text flip animation */
-@keyframes text-flip {
+/* Keyframes for mobile (60px steps) */
+@keyframes text-flip-mobile {
   0% {
-    margin-top: 130px;
+    margin-top: 0;
   }
-  5% {
-    margin-top: -3px;
-  }
-  33% {
-    margin-top: -3px;
-  }
-  38% {
-    margin-top: -160px;
-  }
-  66% {
-    margin-top: -160px;
-  }
-  71% {
-    margin-top: -315px;
-  }
-  99.99% {
-    margin-top: -315px;
-  }
+  16% {
+    margin-top: 0;
+  } /* Stays on Word 1 */
+  20% {
+    margin-top: -60px;
+  } /* Moves to Word 2 */
+  49% {
+    margin-top: -60px;
+  } /* Stays on Word 2 */
+  53% {
+    margin-top: -120px;
+  } /* Moves to Word 3 */
+  82% {
+    margin-top: -120px;
+  } /* Stays on Word 3 */
+  86% {
+    margin-top: -180px;
+  } /* Moves to duplicate */
   100% {
-    margin-top: 130px;
+    margin-top: -180px;
+  } /* Stays on duplicate */
+}
+
+/* Keyframes for desktop (75px steps) */
+@keyframes text-flip-desktop {
+  0% {
+    margin-top: 0;
   }
+  16% {
+    margin-top: 0;
+  } /* Stays on Word 1 */
+  20% {
+    margin-top: -75px;
+  } /* Moves to Word 2 */
+  49% {
+    margin-top: -75px;
+  } /* Stays on Word 2 */
+  53% {
+    margin-top: -150px;
+  } /* Moves to Word 3 */
+  82% {
+    margin-top: -150px;
+  } /* Stays on Word 3 */
+  86% {
+    margin-top: -225px;
+  } /* Moves to duplicate */
+  100% {
+    margin-top: -225px;
+  } /* Stays on duplicate */
 }
 
 /*

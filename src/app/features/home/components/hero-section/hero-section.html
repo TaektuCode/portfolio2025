@@ -3,43 +3,46 @@
 >
   <div class="absolute inset-0 z-0 bg-black/80"></div>
 
-  <div class="absolute top-8 right-8 z-20 flex items-center gap-4">
-    <app-language-toggle />
-    <app-theme-toggle />
-  </div>
-
   <div
     class="relative z-10 mx-auto flex h-full flex-col items-center justify-center"
   >
-    <div class="w-full max-w-[1440px] px-4 text-center">
+    <div class="w-full max-w-[1440px] px-7 text-center">
       <div
-        class="flex-col items-center justify-center font-headings text-5xl uppercase text-primary"
+        class="flex-col items-center justify-center font-headings text-3xl uppercase text-primary md:text-5xl"
       >
         <span>{{ "HERO.FLIP_BEFORE" | translate }}</span>
 
-        <div class="h-[75px] overflow-hidden">
+        <div class="h-[60px] overflow-hidden md:h-[75px]">
           <div class="animate-text-flip">
-            <div>
+            <div class="flex h-[60px] items-center justify-center md:h-[75px]">
               <div
-                class="mb-[75px] inline-block rounded-md px-3 py-2 text-primary text-glow"
+                class="inline-block rounded-md px-3 py-2 text-primary text-glow"
               >
                 {{ "HERO.FLIP_WORD_1" | translate }}
               </div>
             </div>
 
-            <div>
+            <div class="flex h-[60px] items-center justify-center md:h-[75px]">
               <div
-                class="mb-[75px] inline-block rounded-md text-glow px-3 py-2 text-white"
+                class="inline-block rounded-md text-glow px-3 py-2 text-white"
               >
                 {{ "HERO.FLIP_WORD_2" | translate }}
               </div>
             </div>
 
-            <div>
+            <div class="flex h-[60px] items-center justify-center md:h-[75px]">
               <div
-                class="mb-[75px] inline-block rounded-md text-glow px-3 py-2 text-white"
+                class="inline-block rounded-md text-glow px-3 py-2 text-white"
               >
                 {{ "HERO.FLIP_WORD_3" | translate }}
+              </div>
+            </div>
+
+            <div class="flex h-[60px] items-center justify-center md:h-[75px]">
+              <div
+                class="inline-block rounded-md px-3 py-2 text-primary text-glow"
+              >
+                {{ "HERO.FLIP_WORD_1" | translate }}
               </div>
             </div>
           </div>
@@ -48,14 +51,17 @@
         <span>{{ "HERO.FLIP_AFTER" | translate }}</span>
       </div>
 
-      <p class="font-text mt-3 text-xl text-secondary">
+      <p class="font-text mt-2 text-lg text-secondary md:mt-3 md:text-xl">
         {{ "HERO.NAME" | translate }}
       </p>
 
-      <p class="font-text text-xl text-secondary">
+      <p class="font-text text-lg text-secondary md:text-xl">
         {{ "HERO.JOB_TITLE" | translate }}
       </p>
-      <div class="mt-8 flex justify-center gap-4">
+
+      <div
+        class="mt-6 flex flex-col items-center gap-4 md:mt-8 md:flex-row md:justify-center"
+      >
         <app-button variant="glow" [text]="'HERO.CTA_PRIMARY' | translate">
         </app-button>
 
@@ -66,7 +72,14 @@
         >
         </app-button>
       </div>
-      <app-social-links />
+
+      <div class="mt-6 md:mt-8">
+        <app-social-links />
+      </div>
     </div>
   </div>
 </section>
+<!-- <div class="absolute top-8 right-8 z-20 flex items-center gap-4">
+    <app-language-toggle />
+    <app-theme-toggle />
+  </div> -->
