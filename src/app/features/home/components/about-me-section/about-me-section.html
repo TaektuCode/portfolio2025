@@ -1,0 +1,31 @@
+<section class="bg-white/10 py-16 md:py-24">
+  <div class="mx-auto w-full max-w-[1440px] px-7">
+    <h2 class="text-center font-headings text-4xl text-primary md:text-5xl">
+      {{ "ABOUT.TITLE" | translate }}
+    </h2>
+
+    <div
+      class="mt-12 grid grid-cols-1 items-center gap-12 lg:mt-16 lg:grid-cols-2 lg:gap-16"
+    >
+      <div class="w-full max-w-md justify-self-center lg:justify-self-start">
+        <img
+          src="assets/images/dein-foto.jpg"
+          alt="{{ 'ABOUT.PHOTO_ALT' | translate }}"
+          class="rounded-lg border border-border shadow-xl shadow-accent/5"
+        />
+      </div>
+
+      <div class="flex flex-col gap-4 text-left">
+        <p class="font-text text-lg text-primary">
+          {{ "ABOUT.PARA_1" | translate }}
+        </p>
+        <p class="font-text text-lg text-primary">
+          {{ "ABOUT.PARA_2" | translate }}
+        </p>
+        <p class="font-text text-lg text-primary">
+          {{ "ABOUT.PARA_3" | translate }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

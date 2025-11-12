@@ -22,5 +22,12 @@
       "TITLE": "Projekt 2 Titel (z.B. To-Do App)",
       "DESCRIPTION": "Eine Beschreibung für das zweite Projekt, das du hier präsentierst."
     }
+  },
+  "ABOUT": {
+    "TITLE": "Über mich",
+    "PHOTO_ALT": "Ein Foto von Alex Russotto",
+    "PARA_1": "Hallo! Ich bin Alex, ein Frontend-Entwickler aus Deutschland. Meine Leidenschaft ist es, Ideen in intuitive, performante und visuell ansprechende Webanwendungen zu verwandeln.",
+    "PARA_2": "Ich bin spezialisiert auf Angular und TypeScript und liebe es, komplexe Probleme mit sauberem und wartbarem Code zu lösen. Mein Ziel ist es, Anwendungen zu schaffen, die nicht nur technisch einwandfrei, sondern auch für den Endbenutzer eine Freude sind.",
+    "PARA_3": "Wenn ich nicht gerade code, erkunde ich neue Technologien oder arbeite an meinen eigenen Projekten."
   }
 }
