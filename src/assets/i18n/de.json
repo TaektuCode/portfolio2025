@@ -9,5 +9,18 @@
     "FLIP_AFTER": "Anwendungen.",
     "CTA_PRIMARY": "Projekte",
     "CTA_SECONDARY": "Über mich"
+  },
+  "PROJECTSECTION": {
+    "TITLE": "Projekte",
+    "MEDIA_PLACEHOLDER": "Video lädt...",
+    "LIVE_TEST": "Live Test",
+    "PROJECT_1": {
+      "TITLE": "Projekt 1 Titel (z.B. Portfolio Seite)",
+      "DESCRIPTION": "Eine kurze und klare Beschreibung, was dieses Projekt ist und welche Technologien verwendet wurden."
+    },
+    "PROJECT_2": {
+      "TITLE": "Projekt 2 Titel (z.B. To-Do App)",
+      "DESCRIPTION": "Eine Beschreibung für das zweite Projekt, das du hier präsentierst."
+    }
   }
 }

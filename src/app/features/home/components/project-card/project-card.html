@@ -1,0 +1,42 @@
+<div
+  class="project-card h-full flex flex-col rounded-lg border border-border bg-white/5 transition-all duration-300 hover:-translate-y-2 hover:border-accent"
+>
+  <div class="flex aspect-video w-full items-center justify-center bg-black/20">
+    <span class="text-secondary">{{
+      "PROJECTSECTION.MEDIA_PLACEHOLDER" | translate
+    }}</span>
+  </div>
+
+  <div class="flex flex-grow flex-col gap-3 p-6">
+    <h3 class="font-headings text-2xl text-primary">
+      {{ titleKey() | translate }}
+    </h3>
+
+    <p class="font-text text-base text-secondary">
+      {{ descriptionKey() | translate }}
+    </p>
+
+    <div
+      class="mt-auto flex items-center justify-between pt-4 md:justify-start md:gap-4"
+    >
+      @if (githubUrl()) {
+      <a
+        [href]="githubUrl()"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub repository"
+        class="text-secondary transition-colors hover:text-primary"
+      >
+        <app-icon-github class="h-6 w-6"></app-icon-github>
+      </a>
+      } @if (liveUrl()) {
+      <app-button
+        variant="secondary"
+        [href]="liveUrl()"
+        [text]="'PROJECTSECTION.LIVE_TEST' | translate"
+      >
+      </app-button>
+      }
+    </div>
+  </div>
+</div>

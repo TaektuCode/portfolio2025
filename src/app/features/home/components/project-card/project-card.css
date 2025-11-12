@@ -1,0 +1,6 @@
+.project-card {
+  overflow: hidden;
+}
+.project-card:hover {
+  box-shadow: 0 10px 30px hsla(var(--accent-default), 0.1);
+}
