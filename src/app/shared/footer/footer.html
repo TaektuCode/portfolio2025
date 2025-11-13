@@ -5,14 +5,14 @@
 
       <div class="flex gap-4 font-text text-sm text-secondary">
         <a
-          [routerLink]="['/impressum']"
+          [routerLink]="['/', 'ROUTES.LEGAL' | translate]"
           class="transition-colors hover:text-primary"
         >
           {{ "FOOTER.LEGAL" | translate }}
         </a>
         <span>|</span>
         <a
-          [routerLink]="['/privacy']"
+          [routerLink]="['/', 'ROUTES.PRIVACY' | translate]"
           class="transition-colors hover:text-primary"
         >
           {{ "FOOTER.PRIVACY" | translate }}

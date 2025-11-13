@@ -62,5 +62,52 @@
     "LEGAL": "Legal Notice",
     "PRIVACY": "Privacy Policy",
     "ALL_RIGHTS": "All rights reserved."
+  },
+  "PRIVACY_POLICY": {
+    "MAIN_HEADLINE": "Privacy Policy",
+    "SECTION_1_TITLE": "1. Data Protection at a Glance",
+    "GENERAL_INFO_TITLE": "General Information",
+    "GENERAL_INFO_TEXT": "The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data with which you can be personally identified. Detailed information on the subject of data protection can be found in our privacy policy listed below this text.",
+    "RESPONSIBLE_PERSON_TITLE": "Responsible Entity",
+    "RESPONSIBLE_PERSON_TEXT": "The responsible entity for data processing on this website is:\n\nAlex Russotto\nKirchbühl 1\n79669 Zell i.W.\n\nPhone: +49 15752237505\nEmail: info@russottoalex.dev",
+    "SECTION_2_TITLE": "2. Hosting and Data Collection",
+    "HOSTING_TITLE": "External Hosting (Netlify)",
+    "HOSTING_TEXT": "This website is hosted by Netlify, Inc., 44 Montgomery Street, Suite 300, San Francisco, California 94104, USA. When you visit our website, Netlify collects various log files including your IP addresses. This is based on Art. 6(1)(f) GDPR. We have a legitimate interest in the most reliable presentation of our website. A contract for data processing (AVV) or a Data Processing Addendum (DPA) has been concluded with Netlify to ensure data protection-compliant handling.",
+    "CONTACT_FORM_TITLE": "Contact Form (EmailJS)",
+    "CONTACT_FORM_TEXT": "If you send us inquiries via the contact form, your details from the inquiry form, including the contact details you provided there, will be stored by us for the purpose of processing the inquiry and in the event of follow-up questions, and forwarded to our email inbox via the third-party provider EmailJS (EmailJS PTE. LTD., Singapore). This data is processed on the basis of Art. 6(1)(b) GDPR, provided your inquiry is related to the fulfillment of a contract or is necessary for the implementation of pre-contractual measures. In all other cases, the processing is based on our legitimate interest in the effective processing of inquiries addressed to us (Art. 6(1)(f) GDPR). A DPA has also been concluded with EmailJS.",
+    "SECTION_3_TITLE": "3. Your Rights as a Data Subject",
+    "RIGHTS_TEXT": "Within the framework of the applicable legal provisions, you have the right at any time to free information about your stored personal data, its origin and recipients, and the purpose of the data processing and, if applicable, a right to correction or deletion of this data. You can contact us at any time for this purpose and for further questions on the subject of personal data."
+  },
+  "LEGAL_NOTICE": {
+    "MAIN_HEADLINE": "Legal Notice",
+    "IMPRESSUM": {
+      "ACCORDING_TO": "Information according to § 5 TMG",
+      "ADDRESS_TITLE": "Alex Russotto\nKirchbühl 1\n79669 Zell i.W.\nGermany",
+      "CONTENT_RESPONSIBILITY_TITLE": "Responsible for the content according to § 55 Abs. 2 RStV",
+      "CONTENT_RESPONSIBILITY_ADDRESS": "Alex Russotto\nKirchbühl 1\n79669 Zell i.W."
+    },
+    "CONTACT": {
+      "TITLE": "Contact",
+      "PHONE_LABEL": "Phone: +49 15752237505",
+      "EMAIL_LABEL": "Email: info@russottoalex.dev"
+    },
+    "DISCLAIMER": {
+      "TITLE": "Disclaimer",
+      "CONTENT_LIABILITY_TITLE": "Liability for Content",
+      "CONTENT_LIABILITY_TEXT": "As a service provider, we are responsible for our own content on these pages according to § 7 Abs.1 TMG (German Telemedia Act) and general laws. According to §§ 8 to 10 TMG, however, we as a service provider are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under general laws remain unaffected. However, liability in this regard is only possible from the time of knowledge of a specific infringement. Upon notification of such violations, we will remove this content immediately.",
+      "LINK_LIABILITY_TITLE": "Liability for Links",
+      "LINK_LIABILITY_TEXT": "Our offer contains links to external websites of third parties, over whose content we have no influence. Therefore, we cannot assume any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, permanent content control of the linked pages is not reasonable without concrete evidence of an infringement. Upon notification of violations, we will remove such links immediately.",
+      "COPYRIGHT_TITLE": "Copyright",
+      "COPYRIGHT_TEXT": "The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is marked as such. Should you nevertheless become aware of a copyright infringement, we ask for a corresponding note. Upon notification of violations, we will remove such content immediately."
+    },
+    "DISPUTE_RESOLUTION": {
+      "TITLE": "EU Dispute Resolution",
+      "PLATFORM_TEXT": "The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr/",
+      "PARTICIPATION_TEXT": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."
+    }
+  },
+  "ROUTES": {
+    "PRIVACY": "privacy-policy",
+    "LEGAL": "legal-notice"
   }
 }
