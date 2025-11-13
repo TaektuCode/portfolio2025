@@ -29,5 +29,9 @@
     "PARA_1": "Hallo! Ich bin Alex, ein Frontend-Entwickler aus Deutschland. Meine Leidenschaft ist es, Ideen in intuitive, performante und visuell ansprechende Webanwendungen zu verwandeln.",
     "PARA_2": "Ich bin spezialisiert auf Angular und TypeScript und liebe es, komplexe Probleme mit sauberem und wartbarem Code zu lösen. Mein Ziel ist es, Anwendungen zu schaffen, die nicht nur technisch einwandfrei, sondern auch für den Endbenutzer eine Freude sind.",
     "PARA_3": "Wenn ich nicht gerade code, erkunde ich neue Technologien oder arbeite an meinen eigenen Projekten."
+  },
+  "CONTACT": {
+    "TITLE": "Sag Hallo",
+    "SUBTITLE": "Ob Projektidee, Stellenangebot oder einfach nur eine Frage – ich freue mich, von dir zu hören."
   }
 }
