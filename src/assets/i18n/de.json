@@ -32,6 +32,30 @@
   },
   "CONTACT": {
     "TITLE": "Sag Hallo",
-    "SUBTITLE": "Ob Projektidee, Stellenangebot oder einfach nur eine Frage – ich freue mich, von dir zu hören."
+    "SUBTITLE": "Ob Projektidee, Stellenangebot oder einfach nur eine Frage – ich freue mich, von dir zu hören.",
+    "FORM": {
+      "NAME": "Dein Name",
+      "EMAIL": "Deine E-Mail",
+      "MESSAGE": "Deine Nachricht",
+      "SEND": "Nachricht senden",
+      "SENDING": "Sende...",
+      "PRIVACY": {
+        "PART1": "Ich habe die",
+        "LINK": "Datenschutzerklärung",
+        "PART2": "gelesen und stimme der Verarbeitung meiner Daten zu."
+      },
+      "ERRORS": {
+        "NAME_REQUIRED": "Bitte gib deinen Namen ein.",
+        "EMAIL_REQUIRED": "Bitte gib deine E-Mail-Adresse ein.",
+        "EMAIL_INVALID": "Die E-Mail-Adresse ist ungültig.",
+        "MESSAGE_REQUIRED": "Bitte gib eine Nachricht ein.",
+        "MESSAGE_MINLENGTH": "Die Nachricht muss mindestens {{requiredLength}} Zeichen lang sein.",
+        "PRIVACY_REQUIRED": "Bitte stimme der Datenschutzerklärung zu."
+      },
+      "FEEDBACK": {
+        "SUCCESS": "Vielen Dank! Deine Nachricht wurde erfolgreich gesendet.",
+        "ERROR": "Fehler. Bitte versuche es später erneut."
+      }
+    }
   }
 }

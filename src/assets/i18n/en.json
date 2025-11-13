@@ -32,6 +32,30 @@
   },
   "CONTACT": {
     "TITLE": "Say Hello",
-    "SUBTITLE": "Whether you have a project idea, a job offer, or just a question – I look forward to hearing from you."
+    "SUBTITLE": "Whether you have a project idea, a job offer, or just a question – I look forward to hearing from you.",
+    "FORM": {
+      "NAME": "Your Name",
+      "EMAIL": "Your Email",
+      "MESSAGE": "Your Message",
+      "SEND": "Send Message",
+      "SENDING": "Sending...",
+      "PRIVACY": {
+        "PART1": "I have read and agree to the",
+        "LINK": "Privacy Policy",
+        "PART2": "regarding the processing of my data."
+      },
+      "ERRORS": {
+        "NAME_REQUIRED": "Please enter your name.",
+        "EMAIL_REQUIRED": "Please enter your email address.",
+        "EMAIL_INVALID": "The email address is invalid.",
+        "MESSAGE_REQUIRED": "Please enter a message.",
+        "MESSAGE_MINLENGTH": "The message must be at least {{requiredLength}} characters long.",
+        "PRIVACY_REQUIRED": "Please accept the privacy policy."
+      },
+      "FEEDBACK": {
+        "SUCCESS": "Thank you! Your message has been sent successfully.",
+        "ERROR": "Error. Please try again later."
+      }
+    }
   }
 }

@@ -1,0 +1,127 @@
+<form
+  [formGroup]="contactForm"
+  (ngSubmit)="onSubmit()"
+  class="grid grid-cols-1 gap-x-6 gap-y-2 text-left md:grid-cols-2"
+>
+  <div class="md:col-span-1">
+    <label for="name" class="form-label">{{
+      "CONTACT.FORM.NAME" | translate
+    }}</label>
+    <input
+      id="name"
+      type="text"
+      formControlName="name"
+      class="form-input"
+      [class.invalid]="name?.invalid && (name?.dirty || name?.touched)"
+    />
+    @if (showNameRequiredError) {
+    <p class="form-error">
+      {{ "CONTACT.FORM.ERRORS.NAME_REQUIRED" | translate }}
+    </p>
+    }
+  </div>
+
+  <div class="md:col-span-1">
+    <label for="email" class="form-label">{{
+      "CONTACT.FORM.EMAIL" | translate
+    }}</label>
+    <input
+      id="email"
+      type="email"
+      formControlName="email"
+      class="form-input"
+      [class.invalid]="email?.invalid && (email?.dirty || email?.touched)"
+    />
+    @if (showEmailRequiredError) {
+    <p class="form-error">
+      {{ "CONTACT.FORM.ERRORS.EMAIL_REQUIRED" | translate }}
+    </p>
+    } @else if (showEmailInvalidError) {
+    <p class="form-error">
+      {{ "CONTACT.FORM.ERRORS.EMAIL_INVALID" | translate }}
+    </p>
+    }
+  </div>
+
+  <div class="md:col-span-2">
+    <label for="message" class="form-label">{{
+      "CONTACT.FORM.MESSAGE" | translate
+    }}</label>
+    <textarea
+      id="message"
+      formControlName="message"
+      class="form-input"
+      rows="5"
+      [class.invalid]="message?.invalid && (message?.dirty || message?.touched)"
+    ></textarea>
+    @if (showMessageRequiredError) {
+    <p class="form-error">
+      {{ "CONTACT.FORM.ERRORS.MESSAGE_REQUIRED" | translate }}
+    </p>
+    } @else if (showMessageMinLengthError) {
+    <p class="form-error">
+      {{
+        "CONTACT.FORM.ERRORS.MESSAGE_MINLENGTH"
+          | translate : { requiredLength: messageRequiredLength }
+      }}
+    </p>
+    }
+  </div>
+
+  <div class="md:col-span-2 flex flex-col gap-2">
+    <div class="flex items-center gap-3">
+      <input
+        id="privacy"
+        type="checkbox"
+        formControlName="privacy"
+        class="h-4 w-4 rounded border-border bg-white/10 text-accent focus:ring-accent"
+        [class.invalid-check]="privacy?.invalid && privacy?.touched"
+      />
+      <label for="privacy" class="text-sm text-secondary">
+        {{ "CONTACT.FORM.PRIVACY.PART1" | translate }}
+        <a
+          [routerLink]="['/privacy-policy']"
+          class="text-primary underline hover:text-accent"
+        >
+          {{ "CONTACT.FORM.PRIVACY.LINK" | translate }}
+        </a>
+        {{ "CONTACT.FORM.PRIVACY.PART2" | translate }}
+      </label>
+    </div>
+    @if (showPrivacyError) {
+    <p class="form-error">
+      {{ "CONTACT.FORM.ERRORS.PRIVACY_REQUIRED" | translate }}
+    </p>
+    }
+  </div>
+
+  <div class="md:col-span-2">
+    <app-button
+      type="submit"
+      variant="primary"
+      [disabled]="contactForm.invalid || isSubmitting()"
+      [text]="
+        isSubmitting()
+          ? ('CONTACT.FORM.SENDING' | translate)
+          : ('CONTACT.FORM.SEND' | translate)
+      "
+    >
+    </app-button>
+  </div>
+
+  @if (submissionStatus()) {
+  <div
+    class="md:col-span-2 mt-4 rounded-lg p-4 text-center font-semibold"
+    [ngClass]="{
+      'bg-green-500/10 text-green-400': submissionStatus() === 'success',
+      'bg-accent/10 text-accent': submissionStatus() === 'error'
+    }"
+  >
+    @if (submissionStatus() === 'success') {
+    <p>{{ "CONTACT.FORM.FEEDBACK.SUCCESS" | translate }}</p>
+    } @else if (submissionStatus() === 'error') {
+    <p>{{ "CONTACT.FORM.FEEDBACK.ERROR" | translate }}</p>
+    }
+  </div>
+  }
+</form>

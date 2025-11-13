@@ -9,6 +9,8 @@ import { NgClass } from '@angular/common';
 export class Button {
   variant = input<'primary' | 'secondary' | 'glow'>('primary');
   href = input<string>();
-
   text = input<string>('');
+  disabled = input<boolean>(false);
+
+  type = input<string>('button');
 }

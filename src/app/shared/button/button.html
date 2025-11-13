@@ -6,21 +6,26 @@
     'bg-accent text-white hover:scale-105': variant() === 'primary',
     'border-2 border-primary text-primary hover:bg-primary hover:text-background':
       variant() === 'secondary',
-    'glow-on-hover-effect': variant() === 'glow'
+    'glow-on-hover-effect': variant() === 'glow',
+    'opacity-50 cursor-not-allowed': disabled()
   }"
+  [attr.aria-disabled]="disabled()"
+  [class.pointer-events-none]="disabled()"
 >
   {{ text() }}
 </a>
 } @else {
 <button
-  type="button"
+  [type]="type()"
   class="rounded-full px-6 py-3 font-semibold transition"
   [ngClass]="{
     'bg-accent text-white hover:scale-105': variant() === 'primary',
     'border-2 border-primary text-primary hover:bg-primary hover:text-background':
       variant() === 'secondary',
-    'glow-on-hover-effect': variant() === 'glow'
+    'glow-on-hover-effect': variant() === 'glow',
+    'opacity-50 cursor-not-allowed': disabled()
   }"
+  [disabled]="disabled()"
 >
   {{ text() }}
 </button>

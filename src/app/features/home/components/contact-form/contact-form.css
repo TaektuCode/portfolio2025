@@ -1,0 +1,26 @@
+/* Styling for the <label> elements */
+.form-label {
+  @apply mb-2 block text-left font-text text-sm font-semibold text-primary;
+}
+
+/* Base styling for all <input> and <textarea> fields */
+.form-input {
+  @apply w-full rounded-lg border border-border bg-white/5 p-3 font-text text-primary;
+  @apply transition-colors duration-200;
+  @apply focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/50;
+}
+
+/* Visual feedback for invalid fields */
+.form-input.invalid {
+  @apply border-accent text-accent;
+}
+
+/* Visual feedback for invalid checkbox */
+.invalid-check {
+  @apply ring-2 ring-accent;
+}
+
+/* Styling for error messages */
+.form-error {
+  @apply mt-1 text-left text-sm text-accent;
+}
