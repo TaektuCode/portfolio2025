@@ -57,5 +57,10 @@
         "ERROR": "Error. Please try again later."
       }
     }
+  },
+  "FOOTER": {
+    "LEGAL": "Legal Notice",
+    "PRIVACY": "Privacy Policy",
+    "ALL_RIGHTS": "All rights reserved."
   }
 }

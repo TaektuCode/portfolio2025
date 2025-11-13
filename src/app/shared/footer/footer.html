@@ -1,0 +1,28 @@
+<footer class="border-t border-border bg-white/10">
+  <div class="mx-auto w-full max-w-[1440px] px-7 py-12">
+    <div class="flex flex-col items-center gap-6 text-center">
+      <app-social-links></app-social-links>
+
+      <div class="flex gap-4 font-text text-sm text-secondary">
+        <a
+          [routerLink]="['/impressum']"
+          class="transition-colors hover:text-primary"
+        >
+          {{ "FOOTER.LEGAL" | translate }}
+        </a>
+        <span>|</span>
+        <a
+          [routerLink]="['/privacy']"
+          class="transition-colors hover:text-primary"
+        >
+          {{ "FOOTER.PRIVACY" | translate }}
+        </a>
+      </div>
+
+      <p class="font-text text-sm text-secondary">
+        &copy; {{ currentYear }} Alex Russotto.
+        {{ "FOOTER.ALL_RIGHTS" | translate }}
+      </p>
+    </div>
+  </div>
+</footer>

@@ -57,5 +57,10 @@
         "ERROR": "Fehler. Bitte versuche es später erneut."
       }
     }
+  },
+  "FOOTER": {
+    "LEGAL": "Impressum",
+    "PRIVACY": "Datenschutz",
+    "ALL_RIGHTS": "Alle Rechte vorbehalten."
   }
 }
