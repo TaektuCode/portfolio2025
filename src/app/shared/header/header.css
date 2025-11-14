@@ -1,0 +1,15 @@
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%); /* Start ausserhalb des Bildschirms oben */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* Endet an seiner normalen Position */
+    opacity: 1;
+  }
+}
+
+/* Wende die Animation beim Laden der Header-Komponente an */
+:host {
+  animation: slideDown 0.5s ease-out forwards; /* 0.5s Dauer, sanft, bleibt am Ende */
+}

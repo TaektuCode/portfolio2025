@@ -1,0 +1,57 @@
+<nav
+  class="fixed top-0 left-0 w-full z-40 transition-all duration-300"
+  [ngClass]="{
+    'bg-background shadow-lg': isScrolled(),
+    'bg-transparent': !isScrolled() && isDarkMode() === 'dark',
+    'bg-white/10': !isScrolled() && isDarkMode() === 'light',
+    'translate-y-0': isHeaderVisible(),
+    '-translate-y-full': !isHeaderVisible()
+  }"
+>
+  <div
+    class="mx-auto flex h-20 w-full max-w-[1440px] items-center justify-between px-7"
+  >
+    <a
+      [routerLink]="['/']"
+      fragment=""
+      class="font-headings text-xl font-bold text-primary transition-colors hover:text-accent"
+    >
+      Alex Russotto
+    </a>
+
+    <div class="hidden items-center gap-6 md:flex">
+      <a
+        [routerLink]="['/']"
+        fragment="projects"
+        class="font-text font-semibold text-primary transition-colors hover:text-accent"
+      >
+        {{ "NAV.PROJECTS" | translate }}
+      </a>
+      <a
+        [routerLink]="['/']"
+        fragment="about"
+        class="font-text font-semibold text-primary transition-colors hover:text-accent"
+      >
+        {{ "NAV.ABOUT" | translate }}
+      </a>
+      <a
+        [routerLink]="['/']"
+        fragment="contact"
+        class="font-text font-semibold text-primary transition-colors hover:text-accent"
+      >
+        {{ "NAV.CONTACT" | translate }}
+      </a>
+    </div>
+
+    <div class="hidden items-center gap-4 md:flex">
+      <div class="h-6 w-px bg-border"></div>
+
+      <app-language-toggle />
+      <app-theme-toggle />
+    </div>
+
+    <div class="flex items-center md:hidden">
+      <button class="text-primary">(Menu)</button>
+    </div>
+  </div>
+</nav>

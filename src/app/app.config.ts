@@ -2,8 +2,9 @@ import {
   ApplicationConfig,
   provideBrowserGlobalErrorListeners,
   provideZoneChangeDetection,
+  importProvidersFrom,
 } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import {
   provideTranslateService,
@@ -25,6 +26,12 @@ export const appConfig: ApplicationConfig = {
       fallbackLang: 'de',
       lang: 'en',
     }),
-    provideRouter(routes),
+
+    importProvidersFrom(
+      RouterModule.forRoot(routes, {
+        anchorScrolling: 'enabled',
+        scrollPositionRestoration: 'enabled',
+      })
+    ),
   ],
 };

@@ -1,4 +1,9 @@
 {
+  "NAV": {
+    "PROJECTS": "Projekte",
+    "ABOUT": "Über mich",
+    "CONTACT": "Kontakt"
+  },
   "HERO": {
     "NAME": "Alex Russotto",
     "JOB_TITLE": "Web Entwickler",

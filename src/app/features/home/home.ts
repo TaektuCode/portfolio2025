@@ -5,6 +5,7 @@ import { ProjectSection } from './components/project-section/project-section';
 import { AboutMeSection } from './components/about-me-section/about-me-section';
 import { ContactSection } from './components/contact-section/contact-section';
 import { FooterComponent } from '@app/shared/footer/footer';
+import { ScrollSpyDirective } from '@app/shared/scroll-spy';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ import { FooterComponent } from '@app/shared/footer/footer';
     AboutMeSection,
     ContactSection,
     FooterComponent,
+    ScrollSpyDirective,
   ],
   templateUrl: './home.html',
   styleUrl: './home.css',

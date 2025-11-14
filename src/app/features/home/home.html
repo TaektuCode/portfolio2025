@@ -1,11 +1,11 @@
 <app-hero-section> </app-hero-section>
 <app-tech-stack-banner />
-<app-project-section id="projects" />
+<app-project-section id="projects" [appScrollSpy]="'projects'" />
 <img
   src="assets/images/backgrounds/wave-seperator.svg"
   alt="Section separator"
   class="w-full h-24"
 />
-<app-about-me-section />
-<app-contact-section />
+<app-about-me-section id="about" [appScrollSpy]="'about'" />
+<app-contact-section id="contact" [appScrollSpy]="'contact'" />
 <app-footer />
