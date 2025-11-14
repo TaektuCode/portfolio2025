@@ -14,7 +14,8 @@
     <a
       [routerLink]="['/']"
       fragment=""
-      class="font-headings text-xl font-bold text-primary transition-colors hover:text-accent"
+      (click)="closeMobileMenu()"
+      class="font-headings text-xl font-bold text-primary transition-colors hover:text-accent z-50"
     >
       Alex Russotto
     </a>
@@ -45,13 +46,56 @@
 
     <div class="hidden items-center gap-4 md:flex">
       <div class="h-6 w-px bg-border"></div>
-
       <app-language-toggle />
       <app-theme-toggle />
     </div>
 
     <div class="flex items-center md:hidden">
-      <button class="text-primary">(Menu)</button>
+      <button (click)="toggleMobileMenu()" class="text-primary z-50 h-8 w-8">
+        @if (isMobileMenuOpen()) {
+        <app-icon-close />
+        } @else {
+        <app-icon-menu />
+        }
+      </button>
     </div>
   </div>
 </nav>
+
+@if (isMobileMenuOpen()) {
+<div
+  class="fixed inset-0 z-30 flex flex-col items-center justify-center gap-10 bg-background"
+>
+  <nav class="flex flex-col items-center gap-8">
+    <a
+      [routerLink]="['/']"
+      fragment="projects"
+      (click)="toggleMobileMenu()"
+      class="font-headings text-3xl text-primary"
+    >
+      {{ "NAV.PROJECTS" | translate }}
+    </a>
+    <a
+      [routerLink]="['/']"
+      fragment="about"
+      (click)="toggleMobileMenu()"
+      class="font-headings text-3xl text-primary"
+    >
+      {{ "NAV.ABOUT" | translate }}
+    </a>
+    <a
+      [routerLink]="['/']"
+      fragment="contact"
+      (click)="toggleMobileMenu()"
+      class="font-headings text-3xl text-primary"
+    >
+      {{ "NAV.CONTACT" | translate }}
+    </a>
+  </nav>
+
+  <div class="absolute bottom-16 flex items-center gap-6">
+    <app-language-toggle />
+    <app-theme-toggle />
+  </div>
+</div>
+}

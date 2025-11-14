@@ -1,10 +1,19 @@
-import { Component, HostListener, signal, inject } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  signal,
+  inject,
+  Renderer2,
+  DOCUMENT,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { LanguageToggle } from '../language-toggle/language-toggle';
 import { ThemeToggle } from '../theme-toggle/theme-toggle';
 import { ThemeService } from '@app/core/theme.service';
+import { IconMenuComponent } from '@app/icons/icon-menu/icon-menu';
+import { IconCloseComponent } from '@app/icons/icon-close/icon-close';
 
 @Component({
   selector: 'app-header',
@@ -14,44 +23,54 @@ import { ThemeService } from '@app/core/theme.service';
     TranslatePipe,
     LanguageToggle,
     ThemeToggle,
+    IconMenuComponent,
+    IconCloseComponent,
   ],
   templateUrl: './header.html',
 })
 export class HeaderComponent {
-  // Dieses Signal steuert den Hintergrund (transparent vs. solide)
+  // --- Signals ---
   isScrolled = signal(false);
-
-  // NEU: Dieses Signal steuert die Sichtbarkeit (rein/raus sliden)
   isHeaderVisible = signal(true);
+  isMobileMenuOpen = signal(false);
 
-  // Speichert die letzte Scroll-Position, um die Richtung zu erkennen
-  private lastScrollY = 0;
-
+  // --- Injections ---
   private themeService = inject(ThemeService);
+  private renderer = inject(Renderer2);
+  private document = inject(DOCUMENT);
   isDarkMode = this.themeService.theme;
+
+  private lastScrollY = 0;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const currentScrollY = window.scrollY;
-
-    // 1. Logik für den Hintergrund (bleibt gleich)
     this.isScrolled.set(currentScrollY > 10);
 
-    // 2. NEUE Logik für die Sichtbarkeit
-    // Immer sichtbar, wenn man ganz oben ist
     if (currentScrollY <= 100) {
       this.isHeaderVisible.set(true);
-    }
-    // Verstecken, wenn man nach unten scrollt
-    else if (currentScrollY > this.lastScrollY) {
+    } else if (currentScrollY > this.lastScrollY) {
       this.isHeaderVisible.set(false);
-    }
-    // Anzeigen, wenn man nach oben scrollt
-    else {
+    } else {
       this.isHeaderVisible.set(true);
     }
-
-    // 3. Die letzte Position für den nächsten Vergleich speichern
     this.lastScrollY = currentScrollY;
+  }
+
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen.update((value) => !value);
+
+    if (this.isMobileMenuOpen()) {
+      this.renderer.addClass(this.document.body, 'overflow-hidden');
+    } else {
+      this.renderer.removeClass(this.document.body, 'overflow-hidden');
+    }
+  }
+
+  closeMobileMenu(): void {
+    if (this.isMobileMenuOpen()) {
+      this.isMobileMenuOpen.set(false);
+      this.renderer.removeClass(this.document.body, 'overflow-hidden');
+    }
   }
 }
