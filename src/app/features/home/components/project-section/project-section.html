@@ -7,12 +7,14 @@
     <div
       class="mt-12 grid grid-cols-1 gap-8 text-left md:mt-16 md:grid-cols-2 md:gap-12"
     >
-      @for (project of projects; track project.titleKey) {
+      @for (project of (projects$ | async); track project.id) {
       <app-project-card
-        [titleKey]="project.titleKey"
+        [titleKey]="project.nameKey"
         [descriptionKey]="project.descriptionKey"
         [githubUrl]="project.githubUrl"
         [liveUrl]="project.liveUrl"
+        [imageUrl]="project.imageUrl"
+        [technologies]="project.technologies"
       />
       }
     </div>

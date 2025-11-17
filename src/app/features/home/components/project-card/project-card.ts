@@ -14,4 +14,6 @@ export class ProjectCardComponent {
   descriptionKey = input.required<string>();
   liveUrl = input<string>();
   githubUrl = input<string>();
+  imageUrl = input<string>();
+  technologies = input<string[]>([]);
 }

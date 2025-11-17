@@ -1,6 +1,8 @@
 @if (href()) {
 <a
   [href]="href()"
+  [attr.target]="target()"
+  [attr.rel]="target() === '_blank' ? 'noopener noreferrer' : null"
   class="inline-block rounded-full px-6 py-3 font-semibold transition"
   [ngClass]="{
     'bg-accent text-white hover:scale-105': variant() === 'primary',

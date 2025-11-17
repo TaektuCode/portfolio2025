@@ -11,6 +11,6 @@ export class Button {
   href = input<string>();
   text = input<string>('');
   disabled = input<boolean>(false);
-
   type = input<string>('button');
+  target = input<string>();
 }

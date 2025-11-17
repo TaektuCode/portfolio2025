@@ -1,26 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ProjectCardComponent } from '../project-card/project-card';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Project } from '@core/models/project.model';
 
 @Component({
   selector: 'app-project-section',
-  imports: [TranslatePipe, ProjectCardComponent],
+  imports: [CommonModule, TranslatePipe, ProjectCardComponent],
   templateUrl: './project-section.html',
   styleUrl: './project-section.css',
 })
-export class ProjectSection {
-  projects = [
-    {
-      titleKey: 'PROJECTSECTION.PROJECT_1.TITLE',
-      descriptionKey: 'PROJECTSECTION.PROJECT_1.DESCRIPTION',
-      githubUrl: 'https://github.com/dein-repo-1',
-      liveUrl: 'https://deine-live-demo-1.de',
-    },
-    {
-      titleKey: 'PROJECTSECTION.PROJECT_2.TITLE',
-      descriptionKey: 'PROJECTSECTION.PROJECT_2.DESCRIPTION',
-      githubUrl: 'https://github.com/dein-repo-2',
-      liveUrl: 'https://deine-live-demo-2.de',
-    },
-  ];
+export class ProjectSection implements OnInit {
+  private http = inject(HttpClient);
+  public projects$!: Observable<Project[]>;
+
+  ngOnInit(): void {
+    this.projects$ = this.http.get<Project[]>('/assets/data/projects.json');
+  }
 }
