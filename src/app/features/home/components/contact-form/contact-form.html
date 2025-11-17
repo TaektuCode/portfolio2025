@@ -50,8 +50,7 @@
     <textarea
       id="message"
       formControlName="message"
-      class="form-input"
-      rows="5"
+      class="form-input h-80 md:h-96"
       [class.invalid]="message?.invalid && (message?.dirty || message?.touched)"
     ></textarea>
     @if (showMessageRequiredError) {
