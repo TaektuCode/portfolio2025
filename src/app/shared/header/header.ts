@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { LanguageToggle } from '../language-toggle/language-toggle';
-import { ThemeToggle } from '../theme-toggle/theme-toggle';
 import { ThemeService } from '@app/core/theme.service';
 import { IconMenuComponent } from '@app/icons/icon-menu/icon-menu';
 import { IconCloseComponent } from '@app/icons/icon-close/icon-close';
@@ -22,7 +21,6 @@ import { IconCloseComponent } from '@app/icons/icon-close/icon-close';
     RouterLink,
     TranslatePipe,
     LanguageToggle,
-    ThemeToggle,
     IconMenuComponent,
     IconCloseComponent,
   ],
