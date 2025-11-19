@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ThemeService } from './core/theme.service';
 import { HeaderComponent } from './shared/header/header';
+import { ScrollToTopComponent } from './shared/scroll-to-top/scroll-to-top';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent],
+  imports: [RouterOutlet, HeaderComponent, ScrollToTopComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
