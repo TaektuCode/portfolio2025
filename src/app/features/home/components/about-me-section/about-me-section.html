@@ -7,11 +7,11 @@
     <div
       class="mt-12 grid grid-cols-1 items-center gap-12 lg:mt-16 lg:grid-cols-2 lg:gap-16"
     >
-      <div class="w-full max-w-md justify-self-center lg:justify-self-start">
+      <div class="w-full max-w-3xl justify-self-center lg:justify-self-center">
         <img
-          src="assets/images/dein-foto.jpg"
-          alt="{{ 'ABOUT.PHOTO_ALT' | translate }}"
-          class="rounded-lg border border-border shadow-xl shadow-accent/5"
+          src="assets/images/about-me-code.png"
+          alt="TypeScript Code Snippet describing Alex"
+          class="w-full rounded-lg border border-border shadow-2xl shadow-accent/10 transition-transform duration-500 hover:rotate-0 hover:scale-105 lg:rotate-3"
         />
       </div>
 
@@ -19,22 +19,23 @@
         <p
           class="font-text text-lg text-primary min-h-[3rem]"
           [appTypewriter]="'ABOUT.PARA_1' | translate"
-          [typingSpeed]="25"
-          (typingComplete)="p1Finished.set(true)"
+          [typingSpeed]="40"
+          (typingComplete)="onP1Complete()"
         ></p>
 
+        @if (p1Finished()) {
         <p
-          class="font-text text-lg text-primary min-h-[3rem]"
-          [appTypewriter]="'ABOUT.PARA_2' | translate"
-          [typingSpeed]="15"
-          [startCondition]="p1Finished()"
-          (typingComplete)="p2Finished.set(true)"
+          class="font-text text-lg text-primary animate-fade-in-text"
+          [innerHTML]="'ABOUT.PARA_2' | translate"
         ></p>
+        } @else {
+        <div class="min-h-[6rem]"></div>
+        }
 
         <p
           class="font-text text-lg text-primary min-h-[3rem]"
           [appTypewriter]="'ABOUT.PARA_3' | translate"
-          [typingSpeed]="10"
+          [typingSpeed]="30"
           [startCondition]="p2Finished()"
         ></p>
       </div>

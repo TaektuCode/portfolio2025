@@ -11,4 +11,12 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class AboutMeSection {
   p1Finished = signal(false);
   p2Finished = signal(false);
+
+  onP1Complete() {
+    this.p1Finished.set(true);
+
+    setTimeout(() => {
+      this.p2Finished.set(true);
+    }, 800);
+  }
 }
