@@ -14,7 +14,7 @@
     "descriptionKey": "PROJECTSECTION.PROJECT_2.DESCRIPTION",
     "imageUrl": "/assets/videos/order_of_the_chosen-clip.mp4",
     "technologies": ["JavaScript", "HTML", "CSS", "API"],
-    "liveUrl": "/pokedex",
+    "liveUrl": "/orderOfTheChosen/",
     "githubUrl": "https://github.com/TaektuCode/order_of_the_chosen"
   },
   {
@@ -23,7 +23,7 @@
     "descriptionKey": "PROJECTSECTION.PROJECT_3.DESCRIPTION",
     "imageUrl": "/assets/videos/pokedex-clip.mp4",
     "technologies": ["JavaScript", "HTML", "CSS", "API"],
-    "liveUrl": "/pokedex",
+    "liveUrl": "/pokedex/",
     "githubUrl": "https://github.com/TaektuCode/pokedex-app"
   }
 ]
