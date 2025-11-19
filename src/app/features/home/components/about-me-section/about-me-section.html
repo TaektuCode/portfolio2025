@@ -40,5 +40,19 @@
         ></p>
       </div>
     </div>
+    <div
+      class="mt-12 flex justify-center fade-in-up"
+      [class.opacity-0]="!p2Finished()"
+    >
+      <app-button
+        class="mt-8"
+        variant="secondary"
+        href="/assets/documents/cv_alex_russotto_de.pdf"
+        download="CV_Alex_Russotto_DE.pdf"
+        [text]="'ABOUT.CV_BUTTON' | translate"
+        target="_blank"
+      >
+      </app-button>
+    </div>
   </div>
 </section>

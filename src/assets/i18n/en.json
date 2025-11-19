@@ -35,10 +35,11 @@
   },
   "ABOUT": {
     "TITLE": "About Me",
-    "PHOTO_ALT": "A photo of Alex Russotto",
+    "PHOTO_ALT": "Code snippet",
     "PARA_1": "Hi! I'm Alex, a frontend developer based in Germany. My passion is transforming ideas into intuitive, performant, and visually appealing web applications.",
     "PARA_2": "I specialize in <span class=\"highlight-keyword\">Angular</span> and <span class=\"highlight-keyword\">TypeScript</span>, and I love solving complex problems with clean, maintainable code. My goal is to build applications that are not only technically sound but also a joy for the end-user.",
-    "PARA_3": "When I'm not coding, I'm exploring new technologies or working on my own projects."
+    "PARA_3": "When I'm not coding, I'm exploring new technologies or working on my own projects.",
+    "CV_BUTTON": "Download CV"
   },
   "CONTACT": {
     "TITLE": "Say Hello",

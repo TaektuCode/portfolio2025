@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
+import { Button } from '@app/shared/button/button';
 import { TypewriterDirective } from '@app/shared/directives/typewriter.directive';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-me-section',
-  imports: [TranslatePipe, TypewriterDirective],
+  imports: [TranslatePipe, TypewriterDirective, Button],
   templateUrl: './about-me-section.html',
   styleUrl: './about-me-section.css',
 })

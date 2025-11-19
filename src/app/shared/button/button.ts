@@ -13,4 +13,5 @@ export class Button {
   disabled = input<boolean>(false);
   type = input<string>('button');
   target = input<string>();
+  download = input<string>();
 }
