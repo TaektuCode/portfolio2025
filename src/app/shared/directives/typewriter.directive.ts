@@ -6,6 +6,8 @@ import {
   EventEmitter,
   OnInit,
   OnDestroy,
+  OnChanges,
+  SimpleChanges,
   inject,
 } from '@angular/core';
 
@@ -13,18 +15,18 @@ import {
   selector: '[appTypewriter]',
   standalone: true,
 })
-export class TypewriterDirective implements OnInit, OnDestroy {
+export class TypewriterDirective implements OnInit, OnDestroy, OnChanges {
   private el = inject(ElementRef);
 
   @Input({ required: true, alias: 'appTypewriter' }) textToType = '';
   @Input() typingSpeed = 30;
-
   @Input() startCondition = true;
 
   @Output() typingComplete = new EventEmitter<void>();
 
   private observer!: IntersectionObserver;
   private hasStarted = false;
+  private isFinished = false;
   private currentText = '';
   private currentIndex = 0;
   private timeoutId: any;
@@ -33,8 +35,17 @@ export class TypewriterDirective implements OnInit, OnDestroy {
   ngOnInit() {
     this.el.nativeElement.textContent = '';
     this.el.nativeElement.style.visibility = 'hidden';
-
     this.setupObserver();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['textToType'] && !changes['textToType'].firstChange) {
+      if (this.isFinished) {
+        this.el.nativeElement.textContent = this.textToType;
+      } else if (this.hasStarted) {
+        this.restartTyping();
+      }
+    }
   }
 
   private setupObserver() {
@@ -68,6 +79,16 @@ export class TypewriterDirective implements OnInit, OnDestroy {
     this.type();
   }
 
+  private restartTyping() {
+    if (this.timeoutId) clearTimeout(this.timeoutId);
+    this.currentIndex = 0;
+    this.currentText = '';
+    this.isFinished = false;
+    this.el.nativeElement.textContent = '';
+    this.el.nativeElement.classList.add('typewriter-cursor');
+    this.type();
+  }
+
   private type() {
     if (this.currentIndex < this.textToType.length) {
       this.currentText += this.textToType.charAt(this.currentIndex);
@@ -75,6 +96,7 @@ export class TypewriterDirective implements OnInit, OnDestroy {
       this.currentIndex++;
       this.timeoutId = setTimeout(() => this.type(), this.typingSpeed);
     } else {
+      this.isFinished = true;
       this.el.nativeElement.classList.remove('typewriter-cursor');
       this.typingComplete.emit();
     }
