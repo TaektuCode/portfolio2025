@@ -1,12 +1,10 @@
 <div
   class="project-card group h-full flex flex-col rounded-lg border border-border bg-white/5 transition-all duration-300 hover:-translate-y-2 hover:border-accent"
-  (mouseenter)="startVideo()"
-  (mouseleave)="stopVideo()"
 >
   <div class="aspect-video w-full overflow-hidden -translate-y-[4px]">
     @if (imageUrl() && imageUrl()?.endsWith('.mp4')) {
     <video
-      #videoPlayer
+      appVideoAutoplay
       [src]="imageUrl()"
       loop
       muted
