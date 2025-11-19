@@ -3,7 +3,7 @@
     "id": 1,
     "nameKey": "PROJECTSECTION.PROJECT_1.TITLE",
     "descriptionKey": "PROJECTSECTION.PROJECT_1.DESCRIPTION",
-    "imageUrl": "/assets/images/projects/join.webp",
+    "imageUrl": "/assets/videos/join-clip.mp4",
     "technologies": ["Angular", "TypeScript", "SCSS", "Firebase"],
     "liveUrl": "/join",
     "githubUrl": "https://github.com/TaektuCode/Join-private"
@@ -12,7 +12,16 @@
     "id": 2,
     "nameKey": "PROJECTSECTION.PROJECT_2.TITLE",
     "descriptionKey": "PROJECTSECTION.PROJECT_2.DESCRIPTION",
-    "imageUrl": "/assets/images/projects/pokedex.webp",
+    "imageUrl": "/assets/videos/order_of_the_chosen-clip.mp4",
+    "technologies": ["JavaScript", "HTML", "CSS", "API"],
+    "liveUrl": "/pokedex",
+    "githubUrl": "https://github.com/TaektuCode/pokedex-app"
+  },
+  {
+    "id": 3,
+    "nameKey": "PROJECTSECTION.PROJECT_3.TITLE",
+    "descriptionKey": "PROJECTSECTION.PROJECT_3.DESCRIPTION",
+    "imageUrl": "/assets/videos/pokedex-clip.mp4",
     "technologies": ["JavaScript", "HTML", "CSS", "API"],
     "liveUrl": "/pokedex",
     "githubUrl": "https://github.com/TaektuCode/pokedex-app"

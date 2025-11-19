@@ -1,8 +1,19 @@
 <div
   class="project-card group h-full flex flex-col rounded-lg border border-border bg-white/5 transition-all duration-300 hover:-translate-y-2 hover:border-accent"
+  (mouseenter)="startVideo()"
+  (mouseleave)="stopVideo()"
 >
-  <div class="aspect-video w-full overflow-hidden">
-    @if (imageUrl()) {
+  <div class="aspect-video w-full overflow-hidden -translate-y-[4px]">
+    @if (imageUrl() && imageUrl()?.endsWith('.mp4')) {
+    <video
+      #videoPlayer
+      [src]="imageUrl()"
+      loop
+      muted
+      playsinline
+      class="h-full w-full object-cover transition-transform duration-300"
+    ></video>
+    } @else if (imageUrl()) {
     <img
       [src]="imageUrl()"
       [alt]="titleKey() | translate"
@@ -42,15 +53,13 @@
       class="mt-auto flex items-center justify-between pt-4 md:justify-start md:gap-4"
     >
       @if (githubUrl()) {
-      <a
+      <app-button
+        variant="secondary"
         [href]="githubUrl()"
+        [text]="'PROJECTSECTION.CODE' | translate"
         target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub repository"
-        class="text-secondary transition-colors hover:text-primary"
       >
-        <app-icon-github class="h-6 w-6"></app-icon-github>
-      </a>
+      </app-button>
       } @if (liveUrl()) {
       <app-button
         variant="secondary"

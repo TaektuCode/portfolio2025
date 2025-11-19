@@ -19,13 +19,18 @@
     "TITLE": "Projekte",
     "MEDIA_PLACEHOLDER": "Video lädt...",
     "LIVE_TEST": "Live Test",
+    "CODE": "Code",
     "PROJECT_1": {
-      "TITLE": "Projekt 1 Titel (z.B. Portfolio Seite)",
-      "DESCRIPTION": "Eine kurze und klare Beschreibung, was dieses Projekt ist und welche Technologien verwendet wurden."
+      "TITLE": "JOIN",
+      "DESCRIPTION": "Ein Task-Manager im Kanban-Stil, entwickelt zur Optimierung von Team-Workflows. Nutzer können Aufgaben erstellen, sie Teammitgliedern zuweisen, Kategorien festlegen und den Fortschritt visuell auf einem interaktiven Board verfolgen."
     },
     "PROJECT_2": {
-      "TITLE": "Projekt 2 Titel (z.B. To-Do App)",
-      "DESCRIPTION": "Eine Beschreibung für das zweite Projekt, das du hier präsentierst."
+      "TITLE": "Order of the Chosen",
+      "DESCRIPTION": "Deine Fähigkeiten sind in diesem objektorientierten Jump-, Run- und Throw-Abenteuer gefragt. Übernimm die Kontrolle über Flicker, meistere seine Fähigkeiten und bekämpfe wilde Gegner, um sein Reich von der Tyrannei eines mächtigen Ork-Kriegsherrn zu befreien."
+    },
+    "PROJECT_3": {
+      "TITLE": "Pokedex",
+      "DESCRIPTION": "Dieser interaktive Pokédex ermöglicht es, eine riesige Sammlung von Pokémon zu durchsuchen und zu entdecken. Alle Daten werden live von der PokéAPI abgerufen und dynamisch mit Vanilla-JavaScript, HTML und CSS gerendert."
     }
   },
   "ABOUT": {
