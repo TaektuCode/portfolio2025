@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { TypewriterDirective } from '@app/shared/directives/typewriter.directive';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-me-section',
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, TypewriterDirective],
   templateUrl: './about-me-section.html',
   styleUrl: './about-me-section.css',
 })
-export class AboutMeSection {}
+export class AboutMeSection {
+  p1Finished = signal(false);
+  p2Finished = signal(false);
+}

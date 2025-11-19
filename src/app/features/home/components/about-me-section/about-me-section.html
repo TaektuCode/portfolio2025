@@ -16,15 +16,27 @@
       </div>
 
       <div class="flex flex-col gap-4 text-left">
-        <p class="font-text text-lg text-primary">
-          {{ "ABOUT.PARA_1" | translate }}
-        </p>
-        <p class="font-text text-lg text-primary">
-          {{ "ABOUT.PARA_2" | translate }}
-        </p>
-        <p class="font-text text-lg text-primary">
-          {{ "ABOUT.PARA_3" | translate }}
-        </p>
+        <p
+          class="font-text text-lg text-primary min-h-[3rem]"
+          [appTypewriter]="'ABOUT.PARA_1' | translate"
+          [typingSpeed]="25"
+          (typingComplete)="p1Finished.set(true)"
+        ></p>
+
+        <p
+          class="font-text text-lg text-primary min-h-[3rem]"
+          [appTypewriter]="'ABOUT.PARA_2' | translate"
+          [typingSpeed]="15"
+          [startCondition]="p1Finished()"
+          (typingComplete)="p2Finished.set(true)"
+        ></p>
+
+        <p
+          class="font-text text-lg text-primary min-h-[3rem]"
+          [appTypewriter]="'ABOUT.PARA_3' | translate"
+          [typingSpeed]="10"
+          [startCondition]="p2Finished()"
+        ></p>
       </div>
     </div>
   </div>
