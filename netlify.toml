@@ -1,0 +1,24 @@
+# netlify.toml
+
+[[redirects]]
+  from = "/orderOfTheChosen/*"
+  to = "https://order-of-the-chosen.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pokedex/*"
+  to = "https://pokedex2025-app.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/join/*"
+  to = "https://join-app.netlify.app/:splat"
+  status = 200
+  force = true
+
+  [[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
