@@ -20,7 +20,7 @@
 
 [[redirects]]
   from = "/easytask/*"
-  to = "easytask-tracker.netlify.app/:splat"
+  to = "https://easytask-tracker.netlify.app/:splat"
   status = 200
   force = true
 
