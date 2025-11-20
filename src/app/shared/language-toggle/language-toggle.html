@@ -1,6 +1,6 @@
 <div class="flex items-center gap-2">
   <button
-    class="h-10 w-10 transition-opacity duration-200"
+    class="h-20 w-20 md:h-10 md:w-10 transition-opacity duration-200"
     [class.opacity-50]="translate.currentLang === 'en'"
     [class.hover:opacity-100]="translate.currentLang === 'en'"
     (click)="useLanguage('de')"
@@ -12,7 +12,7 @@
   <span class="font-semibold text-secondary"></span>
 
   <button
-    class="h-10 w-10 transition-opacity duration-200"
+    class="h-20 w-20 md:h-10 md:w-10 transition-opacity duration-200"
     [class.opacity-50]="translate.currentLang === 'de'"
     [class.hover:opacity-100]="translate.currentLang === 'de'"
     (click)="useLanguage('en')"
