@@ -25,10 +25,14 @@
       "DESCRIPTION": "A Kanban-style task manager designed to optimize team workflows. Users can create tasks, assign them to team members, define categories, and visually track progress on an interactive board."
     },
     "PROJECT_2": {
+      "TITLE": "EasyTask",
+      "DESCRIPTION": "A CRUD application for task management developed with Angular. Implements features such as dynamic list filtering, form validation, and LocalStorage persistence in a modern, responsive layout."
+    },
+    "PROJECT_3": {
       "TITLE": "Order of the Chosen",
       "DESCRIPTION": "Your skills are required in this object-oriented jump, run, and throw adventure. Take control of Flicker, master his abilities, and fight wild enemies to free his realm from the tyranny of a powerful Orc Warlord."
     },
-    "PROJECT_3": {
+    "PROJECT_4": {
       "TITLE": "Pokedex",
       "DESCRIPTION": "This interactive Pokédex allows users to browse and discover a vast collection of Pokémon. All data is fetched live from the PokéAPI and rendered dynamically using Vanilla JavaScript, HTML, and CSS."
     }

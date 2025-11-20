@@ -12,15 +12,24 @@
     "id": 2,
     "nameKey": "PROJECTSECTION.PROJECT_2.TITLE",
     "descriptionKey": "PROJECTSECTION.PROJECT_2.DESCRIPTION",
+    "imageUrl": "/assets/videos/easytask-clip.mp4",
+    "technologies": ["Angular", "TypeScript", "SCSS", "Local Storage"],
+    "liveUrl": "/easytask/",
+    "githubUrl": "https://github.com/TaektuCode/easyTask"
+  },
+  {
+    "id": 3,
+    "nameKey": "PROJECTSECTION.PROJECT_3.TITLE",
+    "descriptionKey": "PROJECTSECTION.PROJECT_3.DESCRIPTION",
     "imageUrl": "/assets/videos/order_of_the_chosen-clip.mp4",
     "technologies": ["JavaScript", "HTML", "CSS", "API"],
     "liveUrl": "/orderOfTheChosen/",
     "githubUrl": "https://github.com/TaektuCode/order_of_the_chosen"
   },
   {
-    "id": 3,
-    "nameKey": "PROJECTSECTION.PROJECT_3.TITLE",
-    "descriptionKey": "PROJECTSECTION.PROJECT_3.DESCRIPTION",
+    "id": 4,
+    "nameKey": "PROJECTSECTION.PROJECT_4.TITLE",
+    "descriptionKey": "PROJECTSECTION.PROJECT_4.DESCRIPTION",
     "imageUrl": "/assets/videos/pokedex-clip.mp4",
     "technologies": ["JavaScript", "HTML", "CSS", "API"],
     "liveUrl": "/pokedex/",
