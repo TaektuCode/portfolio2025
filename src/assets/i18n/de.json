@@ -127,5 +127,10 @@
   "ROUTES": {
     "PRIVACY": "datenschutz",
     "LEGAL": "impressum"
+  },
+  "404": {
+    "TITLE": "Seite nicht gefunden",
+    "DESCRIPTION": "Ups! Es sieht so aus, als wärst du im Cyberspace verloren gegangen. Diese Seite existiert nicht.",
+    "BUTTON": "Zurück zur Basis"
   }
 }

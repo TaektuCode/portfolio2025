@@ -1,0 +1,31 @@
+<section
+  class="bg-background relative flex h-screen w-full flex-col items-center justify-center overflow-hidden px-7 text-center"
+>
+  <div
+    class="pointer-events-none absolute inset-0 z-0 opacity-10 bg-[url('/assets/images/textures/film-grain.png')]"
+  ></div>
+
+  <h1
+    class="glitch font-headings text-9xl font-bold text-primary md:text-[12rem]"
+    data-text="404"
+  >
+    404
+  </h1>
+
+  <h2 class="font-headings mt-4 text-2xl text-primary md:text-4xl">
+    {{ "404.TITLE" | translate }}
+  </h2>
+
+  <p class="font-text mt-4 max-w-md text-lg text-secondary">
+    {{ "404.DESCRIPTION" | translate }}
+  </p>
+
+  <div class="mt-8">
+    <app-button
+      variant="primary"
+      routerLink="/"
+      [text]="'404.BUTTON' | translate"
+    >
+    </app-button>
+  </div>
+</section>

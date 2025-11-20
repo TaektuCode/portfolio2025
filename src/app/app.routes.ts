@@ -3,6 +3,7 @@ import { Home } from './features/home/home';
 
 import { PrivacyPolicy } from './features/legal/privacy-policy/privacy-policy';
 import { LegalNotice } from './features/legal/legal-notice/legal-notice';
+import { PageNotFound } from './features/page-not-found/page-not-found';
 
 export const routes: Routes = [
   {
@@ -15,7 +16,7 @@ export const routes: Routes = [
   { path: 'legal-notice', component: LegalNotice },
   {
     path: '**',
-    redirectTo: '',
-    pathMatch: 'full',
+    component: PageNotFound,
+    title: '404 - Page Not Found',
   },
 ];

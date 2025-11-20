@@ -127,5 +127,10 @@
   "ROUTES": {
     "PRIVACY": "privacy-policy",
     "LEGAL": "legal-notice"
+  },
+  "404": {
+    "TITLE": "Page Not Found",
+    "DESCRIPTION": "Oops! It looks like you got lost in cyberspace. This page does not exist.",
+    "BUTTON": "Back to Base"
   }
 }
