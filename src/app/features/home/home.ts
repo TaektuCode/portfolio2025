@@ -5,7 +5,7 @@ import { ProjectSection } from './components/project-section/project-section';
 import { AboutMeSection } from './components/about-me-section/about-me-section';
 import { ContactSection } from './components/contact-section/contact-section';
 import { FooterComponent } from '@app/shared/footer/footer';
-import { ScrollSpyDirective } from '@app/shared/scroll-spy';
+import { ScrollSpyDirective } from '@app/shared/directives/scroll-spy.directive';
 
 @Component({
   selector: 'app-home',

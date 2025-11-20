@@ -8,20 +8,22 @@ import {
 
 @Directive({
   selector: '[appVideoAutoplay]',
+  standalone: true,
 })
 export class VideoAutoplayDirective implements OnInit, OnDestroy {
   private element = inject(ElementRef<HTMLVideoElement>);
   private observer: IntersectionObserver | undefined;
 
   ngOnInit(): void {
+    this.element.nativeElement.muted = true;
     this.setupObserver();
   }
 
   private setupObserver(): void {
     const options = {
       root: null,
-      rootMargin: '0px',
-      threshold: 0.2,
+      rootMargin: '50px 0px 50px 0px',
+      threshold: 0.25,
     };
 
     this.observer = new IntersectionObserver((entries) => {
@@ -29,7 +31,7 @@ export class VideoAutoplayDirective implements OnInit, OnDestroy {
         const video = this.element.nativeElement;
 
         if (entry.isIntersecting) {
-          video.play().catch(() => {});
+          this.playVideo(video);
         } else {
           video.pause();
         }
@@ -37,6 +39,21 @@ export class VideoAutoplayDirective implements OnInit, OnDestroy {
     }, options);
 
     this.observer.observe(this.element.nativeElement);
+  }
+
+  private async playVideo(video: HTMLVideoElement) {
+    try {
+      if (video.readyState >= 2) {
+        await video.play();
+      } else {
+        video.oncanplay = async () => {
+          await video.play();
+          video.oncanplay = null;
+        };
+      }
+    } catch (err) {
+      console.warn('Autoplay prevented:', err);
+    }
   }
 
   ngOnDestroy(): void {
