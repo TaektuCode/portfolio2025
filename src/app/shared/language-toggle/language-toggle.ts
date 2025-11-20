@@ -15,6 +15,5 @@ export class LanguageToggle {
 
   useLanguage(language: string): void {
     this.translate.use(language);
-    console.log('Language changed !');
   }
 }
