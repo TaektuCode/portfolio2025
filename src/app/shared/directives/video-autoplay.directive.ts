@@ -21,7 +21,7 @@ export class VideoAutoplayDirective implements OnInit, OnDestroy {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5,
+      threshold: 0.2,
     };
 
     this.observer = new IntersectionObserver((entries) => {
